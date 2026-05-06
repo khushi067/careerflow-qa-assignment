@@ -4,7 +4,7 @@ class LoginPage {
 	  this.usernameInput = '#user-name';
 	  this.passwordInput = '#password';
 	  this.loginButton = '#login-button';
-	  this.errorMessage = '[data-test="error"]';
+	  this.errorMessage = "//h3[contains(text(),'Epic sadface: Username and password do not match a')]";
 	}
   
 	async goto() {
