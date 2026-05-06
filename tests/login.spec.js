@@ -39,5 +39,5 @@ test('Invalid login shows error', async ({ page }) => {
   await loginPage.login(data.invalidUser.username, data.invalidUser.password);
 
   // Assertion: Error message visible
-  await expect(loginPage.getError()).toBeVisible();
+  await expect(await loginPage.getError()).toBeVisible();
 });
