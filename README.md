@@ -10,7 +10,7 @@ It follows the Page Object Model (POM) design pattern to ensure scalability, rea
 
 The automated flow covers a critical user journey:
 
-**Login → Dashboard Verification → Add Item to Cart**
+Login → Dashboard Verification → Add Item to Cart
 
 ### Why?
 This flow validates:
@@ -20,7 +20,7 @@ This flow validates:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 tests/        → Test specifications
@@ -30,30 +30,32 @@ utils/        → Test data
 ```
 ---
 
-##Setup Instructions
+## Setup Instructions
 
-### 1. Clone the repository
-
+## 1. Clone the repository
+```
 git clone https://github.com/<your-username>/careerflow-qa-assignment.git
 cd careerflow-qa-assignment
+```
 
-### 2. Install dependencies
-
+## 2. Install dependencies
+```
 npm install
-
-### 3. Install Playwright browsers
-
+```
+## 3. Install Playwright browsers
+```
 npx playwright install
 ---
-
+```
 ##Running Tests
-
+```
 npx playwright test
-
+```
 To run in headed mode:
-
+```
 npx playwright test --headed
 ---
+```
 
 ## Test Coverage
 
@@ -66,20 +68,25 @@ npx playwright test --headed
 ## Key QA Practices Implemented
 
 **Page Object Model (POM)**
+```
 All page interactions are abstracted into separate classes
 Improves readability, reusability, and maintainability
+```
 
 ** Assertions**
+```
 Validates UI elements and application behavior
 Examples:
 Inventory page visibility after login
 Cart badge count update after adding item
 Error message on invalid login
+```
 
 ** Synchronization**
+```
 No hardcoded waits (waitForTimeout)
 Uses Playwright’s built-in auto-waiting and locators
-
+```
 ---
 
 ## CI Integration
@@ -90,9 +97,9 @@ GitHub Actions workflow is included to:
 
 1. Automatically run tests on every push
 2. Ensure code reliability
-
+**
 Workflow file:
-.github/workflows/playwright.yml
+.github/workflows/playwright.yml**
 ---
 
 ## Assumptions
